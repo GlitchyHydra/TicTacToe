@@ -21,6 +21,7 @@ Postgresql
 Postgresql, Asp.Net Core, SignalR, EF core<br>
 
 1. Set ConnectionStrings in appsettings.json
+2. Replace cors for a client in appsettings.json (AllowedOrigins) if need
 
 What you can't do:
 1. If user is already in game you can not start another
@@ -35,7 +36,8 @@ Typescripts, React
 
 To launch client the next steps are required (run in cmd):
 1. ```yarn install```
-2. ```yarn start```
+2. Replace REACT_APP_CONNECTION_STR port in .env if need 
+3. ```yarn start```
 
 Round timer (15 sec) rendering is not working on client, for now, but
 calculated at server
