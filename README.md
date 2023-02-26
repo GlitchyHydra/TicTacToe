@@ -3,6 +3,7 @@
 TicTacToe game with authentication and SignalR server.
 
 There is the list of users for testing
+(Only username is used to login for simplicity)
 Username|role|Authorized to play
 -----|------|------
 tony | player | yes
