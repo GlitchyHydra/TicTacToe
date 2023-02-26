@@ -47,8 +47,9 @@ function App() {
         //setConnection();
       }
       
+      const connection_str: string = process.env.REACT_APP_CONNECTION_STR!;
       const conn = new signalR.HubConnectionBuilder()
-      .withUrl("http://localhost:5075/game",  {
+      .withUrl(connection_str!,  {
         accessTokenFactory: () => data.token
       })
       .configureLogging(signalR.LogLevel.Information)

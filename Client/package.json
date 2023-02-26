@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@microsoft/signalr": "^7.0.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -12,10 +13,14 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "gh-pages": "^5.0.0",
+    "i": "^0.3.7",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "save-dev": "^0.0.1-security",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
