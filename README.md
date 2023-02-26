@@ -39,3 +39,9 @@ To launch client the next steps are required (run in cmd):
 
 Round timer (15 sec) rendering is not working on client, for now, but
 calculated at server
+
+How to play:
+1. Pass valid username and press search game
+2. Press ready checkbox, when you are ready
+3. Wait for opponent (if there no one is searching)
+4. Play the game!
