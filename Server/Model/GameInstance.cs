@@ -16,6 +16,7 @@ namespace Server
         public ChangeTurnDelegate ChangeTurnDelegate { get; set; }
         public bool IsGameStarted { get; set; }
         public Player PlayerByTurn => Turn ? Player1 : Player2;
+        public bool IsSomeoneWin => Board.IsThreeInRow;
         public bool IsGameOver => Board.IsNoSpaceLeft || Board.IsThreeInRow;
         public bool IsTie => Board.IsNoSpaceLeft;
 

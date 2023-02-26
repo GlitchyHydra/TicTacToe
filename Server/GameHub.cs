@@ -118,7 +118,7 @@ namespace Server
             }
 
             MatchResult matchResult;
-            if (game.IsTie)
+            if (game.IsTie && !game.IsSomeoneWin)
             {
                 await Clients.Group(game.Id).TieGame();
                 matchResult = MatchResult.Tie;
