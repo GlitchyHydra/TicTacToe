@@ -89,6 +89,12 @@ namespace Server
                 return;
             }
 
+            if (!game.IsGameStarted)
+            {
+                await Clients.Caller.NeedToWait();
+                return;
+            }
+
             if (!game.PlayerByTurn.Equals(playerMakingTurn))
             {
                 await Clients.Caller.NotPlayerTurn();

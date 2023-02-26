@@ -19,16 +19,10 @@ namespace Server.Services
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
-            //optionsBuilder.Options.ContextType.Map
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<PlayerData>()
-            //    .Property(e => e.Role)
-            //    .HasConversion(
-            //        v => v.ToString(),
-            //        v => (PlayerRole) Enum.Parse(typeof(PlayerRole), v));
         }
 
         public DbSet<PlayerData> Players { get; set; }

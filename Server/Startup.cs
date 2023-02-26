@@ -15,7 +15,7 @@ namespace Server
 
         public Startup(IConfiguration configuration)
         {
-            
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration;
@@ -37,7 +37,6 @@ namespace Server
             services.AddMvc();
 
             services.AddControllersWithViews();
-            //services.AddAuthentication(JwtBearerDefailts.AuthenticationScheme);
             services.AddCors();
             services.AddSignalR();
             services.AddSingleton<IGameService, GameService>();
@@ -52,14 +51,18 @@ namespace Server
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseDefaultFiles();
-            //app.UseStaticFiles();
+            var allowedOrigins = Configuration.GetSection("AllowedOrigins")
+                .Value
+                .Split(",");
+            var allowedMethods = Configuration.GetSection("AllowedMethods")
+                .Value
+                .Split(",");
 
             app.UseCors(builder =>
             {
-                builder.WithOrigins("http://localhost:3000")
+                builder.WithOrigins(allowedOrigins)
                     .AllowAnyHeader()
-                    .WithMethods("GET", "POST", "DELETE")
+                    .WithMethods(allowedMethods)
                     .AllowCredentials();
             });
 
